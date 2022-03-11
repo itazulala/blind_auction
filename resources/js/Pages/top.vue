@@ -1,63 +1,12 @@
 <template>
     <v-app>
         <!-- サイドメニュー -->
-        <v-expansion-panels>
-            <v-expansion-panel
-                v-for="list in lists"
-                :key="list.id"
-            >
-                <v-expansion-panel-header>
-                    {{ list.title }}
-                </v-expansion-panel-header>
-                <v-expansion-panel-content>
-                    {{ list.text }}
-                </v-expansion-panel-content>
-            </v-expansion-panel>
-        </v-expansion-panels>
+        <v-navigation-drawer app clipped v-model="drawer" dark color="info">
+        </v-navigation-drawer>
 
         <!-- ヘッダー -->
-        <v-app-bar app clippedLeft flat light color="white">
-            <v-app-bar-nav-icon color="black" @click.stop="drawer=!drawer"></v-app-bar-nav-icon>
-            <v-toolbar-title color="black">Blind Auction</v-toolbar-title>
-            <v-spacer></v-spacer>
-            <v-icon
-                large
-                color="green darken-2"
-                class="mx-5"
-            >
-                mdi-domain
-            </v-icon>
-
-            <v-icon
-                large
-                color="blue darken-2"
-                class="mx-5"
-            >
-                mdi-message-text
-            </v-icon>
-
-            <v-icon
-                large
-                color="purple darken-2"
-                class="mx-5"
-            >
-                mdi-dialpad
-            </v-icon>
-
-            <v-icon
-                large
-                color="teal darken-2"
-                class="mx-5"
-            >
-                mdi-email
-            </v-icon>
-            <v-icon
-                large
-                color="teal darken-2"
-                class="mx-5"
-            >
-                mdi-email
-            </v-icon>
+        <v-app-bar app clippedLeft flat dark color="indigo darken-3">
+            <v-app-bar-nav-icon @click.stop="drawer=!drawer"></v-app-bar-nav-icon>
         </v-app-bar>
 
         <!-- メイン -->
