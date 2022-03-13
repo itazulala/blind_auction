@@ -98,43 +98,41 @@
             </v-icon>
         </v-app-bar>
         <v-main>
-            <v-subheader class="text-h6 ma-3">作品一覧</v-subheader>
             <v-container fluid>
-                <v-row>
+                <v-row dense>
                     <v-col
                         v-for="card in cards"
                         :key="card.title"
-                        cols="12"
+                        :cols="12"
                         sm="6"
                         md="4"
                     >
                         <v-card flat>
-                            <v-card-text>
-                            <v-img
-                                :src="card.src"
-                                gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-                                height="200px"
-                                width="200px"
-                                class="mx-auto my-0"
+                            <v-card-text class="justify-center">
+                                <v-img
+                                    :src="card.src"
+                                    gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+                                    height="200px"
+                                    width="220px"
+                                    class="mx-auto my-12"
 
-                            >
-                            </v-img>
+                                >
+                                </v-img>
                             </v-card-text>
-                            <v-card-actions class="pa-3">
+                            <v-card-actions>
                                 {{ card.title }}
                             </v-card-actions>
-                            <div class="dashed"></div>
-                            <v-card-actions class="pa-3">
+                            <v-divider></v-divider>
+                            <v-card-actions>
                                 <v-spacer></v-spacer>
                                 {{ card.creator }}
                             </v-card-actions>
-                            <div class="dashed"></div>
-                            <v-card-actions class="pa-3">
+                            <v-divider></v-divider>
+                            <v-card-actions>
                                 <v-btn>入札</v-btn>
                                 <v-spacer></v-spacer>
                                 <v-icon icon>mdi-heart-outline</v-icon>
                             </v-card-actions>
-                            <div class="dashed"></div>
                         </v-card>
                     </v-col>
                 </v-row>
@@ -185,11 +183,11 @@ export default {
                 ['', ""],
             ],
             cards: [
-                {title: 'タイガー', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', creator: '井上 陽水'},
-                {title: 'タイガー', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', creator: '井上 陽水'},
-                {title: 'タイガー', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', creator: '井上 陽水'},
-                {title: 'タイガー', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', creator: '井上 陽水'},
-                {title: 'タイガー', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', creator: '井上 陽水'},
+                {title: 'タイガー', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', creator: '井上陽水'},
+                {title: 'タイガー', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', creator: '井上陽水'},
+                {title: 'タイガー', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', creator: '井上陽水'},
+                {title: 'タイガー', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', creator: '井上陽水'},
+                {title: 'タイガー', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', creator: '井上陽水'},
 
             ]
         }

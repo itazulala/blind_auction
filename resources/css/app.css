@@ -1,3 +1,7 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+.dashed {
+    border-bottom: 1px dashed #CCCCCC;
+}
