@@ -25,7 +25,7 @@ Route::get('/', function () {
 });
 
 Route::get('/top', function () {
-    return Inertia::render('top', [
+    return Inertia::render('Top', [
     ]);
 });
 
