@@ -1,7 +1,7 @@
 <template>
     <v-app>
         <Header></Header>
- <Sidebar></Sidebar>
+        <Sidebar></Sidebar>
         <v-main>
             <v-container class="pa-10">
                 <v-card class="pt-2 pl-5 pr-5">
@@ -43,7 +43,7 @@
                                     <v-card-actions class="pa-3">
                                         <v-btn>入札</v-btn>
                                         <v-spacer></v-spacer>
-                                        <v-icon icon>mdi-heart-outline</v-icon>
+                                        <v-icon icon v-on:click="">mdi-heart-outline</v-icon>
                                     </v-card-actions>
                                     <div class="dashed"></div>
                                 </v-card>
@@ -60,6 +60,7 @@
 import Header from "./compornets/Header";
 import Sidebar from "./compornets/Sidebar";
 import Footer from "./compornets/Footer";
+
 export default {
     name: 'app',
     components: {
@@ -104,11 +105,11 @@ export default {
                 ['', ""],
             ],
             cards: [
-                {title: 'タイガー', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', creator: '井上陽水'},
-                {title: 'タイガー', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', creator: '井上陽水'},
-                {title: 'タイガー', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', creator: '井上陽水'},
-                {title: 'タイガー', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', creator: '井上陽水'},
-                {title: 'タイガー', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', creator: '井上陽水'},
+                {title: 'お家', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', creator: '渡邉 優太'},
+                {title: 'お家', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', creator: '渡邉 優太'},
+                {title: 'お家', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', creator: '渡邉 優太'},
+                {title: 'お家', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', creator: '渡邉 優太'},
+                {title: 'お家', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', creator: '渡邉 優太'},
 
             ]
         }
