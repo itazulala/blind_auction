@@ -27,13 +27,18 @@ class CreateArtTable extends Migration
             $table->unsignedBigInteger('event_id')->comment('イベントID');
             $table->boolean('sold_flag')->nullable()->default(0)->comment('売却済フラグ');
             $table->boolean('delete_flag')->nullable()->default(0)->comment('削除フラグ');
-            $table->timestamp('registration_time')->nullable()->default(DB::raw('CURRENT_TIMESTAMP'))->comment('登録日時');
-            $table->timestamp('update_time')->nullable()->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'))->comment('更新日時');
+            $table->timestamp('created_at')->nullable()->default(DB::raw('CURRENT_TIMESTAMP'))->comment('登録日時');
+            $table->timestamp('updated_at')->nullable()->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'))->comment('更新日時');
 
+//            $table->foreignId('size_id')->constrained();
+//            $table->foreignId('art_type_id')->constrained();
+//            $table->foreignId('color_id')->constrained();
+//            $table->foreignId('user_id')->constrained();
+//            $table->foreignId('event_id')->constrained();
             $table->foreign('size_id')->references('size_id')->on('sizes');
             $table->foreign('art_type_id')->references('art_type_id')->on('art_types');
             $table->foreign('color_id')->references('color_id')->on('colors');
-            $table->foreign('user_id')->references('id')->on('users')->onUpdate('CASCADE')->onUpdate('CASCADE');
+            $table->foreign('user_id')->references('user_id')->on('users')->onUpdate('CASCADE')->onUpdate('CASCADE');
             $table->foreign('event_id')->references('event_id')->on('events');
         });
     }

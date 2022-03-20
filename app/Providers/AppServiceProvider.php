@@ -21,8 +21,11 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
-        //
+        //カタカナチェック
+//        Validator::extend('katakana', function ($attribute, $value, $parameters, $validator) {
+//            return preg_match('/[ァ-ヴー]+/u', $value);
+//        });
     }
 }

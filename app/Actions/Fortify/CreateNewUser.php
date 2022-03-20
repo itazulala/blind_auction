@@ -23,10 +23,24 @@ class CreateNewUser implements CreatesNewUsers
     public function create(array $input)
     {
         Validator::make($input, [
-            'name' => ['required', 'string', 'max:255'],
+            'last_name_kana' => ['required', 'katakana', 'max:255'],
+            'first_name_kana' => ['required', 'katakana', 'max:255'],
+            'last_name' => ['required', 'string', 'max:255'],
+            'first_name' => ['required', 'string', 'max:255'],
+            'artist' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => $this->passwordRules(),
             'terms' => Jetstream::hasTermsAndPrivacyPolicyFeature() ? ['required', 'accepted'] : '',
+            'phone_number' => ['required', 'integer', 'unique:users'],
+            'postal_code' => ['required', 'string', 'max:7'],
+            'prefectures' => ['required', 'string', 'max:255'],
+            'address' => ['required', 'string', 'max:255'],
+            'tfa_existence' => ['required', 'boolean', 'max:255'],
+            'tfa_token' => ['string', 'max:255', 'unique:users'],
+            'tfa_expiration' => ['datetime'],
+            'delete_flag' => ['required', 'boolean'],
+            'created_at' => ['required', 'timestamp'],
+            'updated_at' => ['required', 'timestamp'],
         ])->validate();
 
         return DB::transaction(function () use ($input) {
