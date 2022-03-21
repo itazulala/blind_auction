@@ -15,10 +15,6 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-//        DB::table('users')->insert([
-//            'last_name' => '渡邉',
-//            'first_name' => '優太'
-//        ]);
         \App\Models\User::factory(10)->create();
     }
 }

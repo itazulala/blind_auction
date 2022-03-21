@@ -16,7 +16,7 @@ class CreateSizesTable extends Migration
         Schema::create('sizes', function (Blueprint $table) {
             $table->id('size_id')->comment('サイズID');
             $table->string('size')->comment('サイズ');
-            $table->boolean('delete_flag')->comment('削除フラグ');
+            $table->boolean('delete_flag')->default(0)->comment('削除フラグ');
         });
     }
 

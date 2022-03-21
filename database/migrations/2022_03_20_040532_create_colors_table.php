@@ -16,7 +16,7 @@ class CreateColorsTable extends Migration
         Schema::create('colors', function (Blueprint $table) {
             $table->id('color_id')->comment('カラーID');
             $table->string('color_name')->comment('カラー名');
-            $table->boolean('delete_flag')->comment('削除フラグ');
+            $table->boolean('delete_flag')->default(0)->comment('削除フラグ');
         });
     }
 

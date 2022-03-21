@@ -14,12 +14,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-//        \App\Models\User::factory(10)->create();
-//        DB::table('users')->insert([
-//            'last_name' => '渡邉',
-//            'first_name' => '優太'
-//        ]);
         $this->call(UserSeeder::class);
-
+        $this->call(CollorSeeder::class);
     }
 }
