@@ -36,11 +36,7 @@ class CreateNewUser implements CreatesNewUsers
             'prefectures' => ['required', 'string', 'max:255'],
             'address' => ['required', 'string', 'max:255'],
             'tfa_existence' => ['required', 'boolean', 'max:255'],
-            'tfa_token' => ['string', 'max:255', 'unique:users'],
-            'tfa_expiration' => ['datetime'],
-            'delete_flag' => ['required', 'boolean'],
-            'created_at' => ['required', 'timestamp'],
-            'updated_at' => ['required', 'timestamp'],
+            'delete_flag' => ['required', 'boolean']
         ])->validate();
 
         return DB::transaction(function () use ($input) {

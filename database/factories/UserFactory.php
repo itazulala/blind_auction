@@ -23,12 +23,30 @@ class UserFactory extends Factory
      */
     public function definition()
     {
+//        return [
+//            'name' => $this->faker->name,
+//            'email' => $this->faker->unique()->safeEmail,
+//            'email_verified_at' => now(),
+//            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+//            'remember_token' => Str::random(10),
+//        ];
+        $name = explode(" ", $this->faker->name);
         return [
-            'name' => $this->faker->name,
+            'first_name_kana' => 'カナミョウジ',
+            'last_name_kana' => 'カナナマエ',
+            'first_name' => $name[0],
+            'last_name' => $name[0],
+            'artist' => $this->faker->name,
             'email' => $this->faker->unique()->safeEmail,
-            'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
-            'remember_token' => Str::random(10),
+//            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+            'password' => 'abcde12345', // password
+            'phone_number' => $this->faker->unique()->phoneNumber,
+            'postal_code' => $this->faker->postcode,
+            'prefecture' => $this->prefecture(),
+            'city' => $this->faker->city,
+            'street_address' => $this->faker->streetAddress,
+            'tfa_existence' => $this->faker->boolean,
+            'tfa_token' => uniqid('', true),
         ];
     }
 
@@ -46,5 +64,11 @@ class UserFactory extends Factory
                 }),
             'ownedTeams'
         );
+    }
+
+    private function prefecture() :string
+    {
+        $prefectures = ['東京都', '埼玉県', '千葉県', '神奈川県', '茨城', '栃木'];
+        return array_rand($prefectures);
     }
 }

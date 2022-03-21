@@ -4,22 +4,21 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
-class DatabaseSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
     public function run(): void
     {
-//        \App\Models\User::factory(10)->create();
 //        DB::table('users')->insert([
 //            'last_name' => '渡邉',
 //            'first_name' => '優太'
 //        ]);
-        $this->call(UserSeeder::class);
-
+        \App\Models\User::factory(10)->create();
     }
 }
