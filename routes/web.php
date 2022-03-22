@@ -24,8 +24,14 @@ Route::get('/', function () {
     ]);
 });
 
+//　TOP画面
 Route::get('/top', function () {
     return Inertia::render('Top', [
+    ]);
+});
+// ユーザー登録画面
+Route::get('/signin', function () {
+    return Inertia::render('Signin', [
     ]);
 });
 
