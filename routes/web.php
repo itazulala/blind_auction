@@ -24,7 +24,7 @@ Route::get('/', function () {
     ]);
 });
 
-//　TOP画面
+// TOP画面
 Route::get('/top', function () {
     return Inertia::render('Top', [
     ]);

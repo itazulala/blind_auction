@@ -5,106 +5,149 @@
         <v-main>
             <v-container class="pa-10">
                 <v-card class="pt-2 pl-5 pr-5">
-                    <v-card-title class="border-b-2">ユーザー登録</v-card-title>
-                    <h1>お名前</h1>
-                    <v-text-field
-                        v-model="setFamilyName"
-                        :rules="rules"
-                        label="性"
-                        outlined
-                    />
-                    <v-text-field
-                        v-model="setFirstName"
-                        :rules="rules"
-                        label="名"
-                        outlined
-                    />
-                    <h1>お名前(カナ)</h1>
-                    <v-text-field
-                        v-model="setFamilyNameKana"
-                        :rules="rules"
-                        label="セイ"
-                        outlined
-                    />
-                    <v-text-field
-                        v-model="setFirstNameKana"
-                        :rules="rules"
-                        label="メイ"
-                        outlined
-                    />
-                    <h1>性別</h1>
-                    <v-select
-                        v-model="setSex"
-                        :items="sex"
-                        outlined
-                    ></v-select>
-                    <h1>アーティスト名</h1>
-                        <v-text-field
-                        v-model="setArtistName"
-                        :rules="rules"
-                        outlined
-                    />
-                    <h1>メールアドレス</h1>
-                    <v-text-field
-                        v-model="setMailAddress"
-                        :rules="rules"
-                        outlined
-                    />
-                    <h1>確認のため再度入力してください</h1>
-                    <v-text-field
-                        v-model="setMailAddress"
-                        :rules="rules"
-                        outlined
-                    />
-                    <h1>電話番号(ハイフンなし)</h1>
-                    <v-text-field
-                        v-model="setTell"
-                        :rules="rules"
-                        outlined
-                    />
-                    <h1>住所</h1>
-                    <v-text-field
-                        v-model="setPostCode"
-                        :rules="rules"
-                        label="郵便番号"
-                        outlined
-                    />
-                    <v-text-field
-                        v-model="setAddress1"
-                        :rules="rules"
-                        label="都道府県"
-                        outlined
-                    />
-                    <v-text-field
-                        v-model="setAddress2"
-                        :rules="rules"
-                        label="市区町村"
-                        outlined
-                    />
-                    <v-text-field
-                        v-model="setAddress3"
-                        :rules="rules"
-                        label="番地"
-                        outlined
-                    />
-                    <v-text-field
-                        v-model="setAddress4"
-                        :rules="rules"
-                        label="建物名と部屋番号"
-                        outlined
-                    />                    
-                    <h1>プロフィール</h1>
-                    <v-text-field
-                        v-model="setPostCode"
-                        :rules="rules"
-                        label="ご自身のプロフィールを記入できます。自由記入欄になります。"
-                        outlined
-                    />
-
-
-
-                    
-                    <v-card-actions class="ma-5" v-if="layoutDisplay == true">
+                    <!--ユーザー登録-->
+                    <v-card-title class="border-b-2" style="">ユーザー登録</v-card-title>
+                    <!--お名前-->
+                    <div >
+                        <h1>お名前</h1>
+                        <div style="display: flex;">
+                            <v-text-field style="padding: 10px;"
+                                v-model="setFamilyName"
+                                :rules="rules"
+                                label="性"
+                                outlined
+                            />
+                            <v-text-field style="padding: 10px;"
+                                v-model="setFirstName"
+                                :rules="rules"
+                                label="名"
+                                outlined
+                            />
+                        </div>    
+                    </div>
+                    <!--お名前(カナ)-->
+                    <div>
+                        <h1>お名前(カナ)</h1>
+                        <div style="display: flex;">
+                            <v-text-field style="padding: 10px;"
+                                v-model="setFamilyNameKana"
+                                :rules="rules"
+                                label="セイ"
+                                outlined
+                            />
+                            <v-text-field style="padding: 10px;"
+                                v-model="setFirstNameKana"
+                                :rules="rules"
+                                label="メイ"
+                                outlined
+                            />
+                        </div>
+                    </div>
+                    <!--性別-->
+                    <div>
+                        <h1>性別</h1>
+                        <div style="display: inline-block; padding: 10px;">
+                            <v-radio-group row v-model="setSex"
+                            >
+                                <v-radio
+                                    label="男性"
+                                    value="1"
+                                ></v-radio>
+                                <v-radio
+                                    label="女性"
+                                    value="2"
+                                ></v-radio>
+                                <v-radio
+                                    label="非公開"
+                                    value="3"
+                                ></v-radio>
+                            </v-radio-group>
+                        </div>
+                    </div>
+                    <!--アーティスト名-->
+                    <div>                    
+                        <h1>アーティスト名</h1>
+                        <v-text-field style="padding: 10px;"
+                            v-model="setArtistName"
+                            :rules="rules"
+                            outlined
+                        />
+                    </div>
+                    <!--メールアドレス-->
+                    <div>
+                        <h1>メールアドレス</h1>
+                        <v-text-field style="padding: 10px;"
+                            v-model="setMailAddress"
+                            :rules="rules"
+                            outlined
+                        />
+                        <h1>メールアドレス(確認用)</h1>
+                        <v-text-field style="padding: 10px;"
+                            v-model="setMailAddress"
+                            :rules="rules"
+                            outlined
+                        />
+                    </div>
+                    <!--電話番号-->
+                    <div>
+                        <h1>電話番号(ハイフンなし)</h1>
+                        <v-text-field style="padding: 10px;"
+                            v-model="setTell"
+                            :rules="rules"
+                            outlined
+                        />
+                    </div>
+                    <!--住所-->
+                    <div>
+                        <h1>住所</h1>
+                        <!--住所上部-->
+                        <div style="display: flex;">
+                            <v-text-field style="padding: 10px;"
+                                v-model="setPostCode"
+                                :rules="rules"
+                                label="郵便番号"
+                                outlined
+                            />
+                            <v-text-field style="padding: 10px;"
+                                v-model="setAddress1"
+                                :rules="rules"
+                                label="都道府県"
+                                outlined
+                            />
+                            <v-text-field style="padding: 10px;"
+                                v-model="setAddress2"
+                                :rules="rules"
+                                label="市区町村"
+                                outlined
+                            />
+                        </div>
+                        <!--住所下部-->
+                        <div style="display: flex;">
+                            <v-text-field style="padding: 10px;"
+                                v-model="setAddress3"
+                                :rules="rules"
+                                label="番地"
+                                outlined
+                            />
+                            <v-text-field style="padding: 10px;"
+                                v-model="setAddress4"
+                                :rules="rules"
+                                label="建物名と部屋番号"
+                                outlined
+                            />                    
+                        </div>
+                    </div>
+                    <!--プロフィール-->
+                    <div>
+                        <h1>プロフィール</h1>
+                        <v-textarea style="padding: 10px;"
+                            v-model="setProfile"
+                            :rules="rules"
+                            outlined
+                            label="自由記入欄です。ご自身のプロフィールをご記入ください。"
+                        ></v-textarea>
+                    </div>
+<!--                    <v-card-actions class="ma-5" v-if="layoutDisplay == true">
                         <v-spacer></v-spacer>
                         <v-icon icon large class="mx-2">mdi-format-list-bulleted-square</v-icon>
                         <v-icon icon large class="mx-2">mdi-view-grid-outline</v-icon>
@@ -147,7 +190,8 @@
                                 </v-card>
                             </v-col>
                         </v-row>
-                    </v-container>
+                    </v-container> -->
+
                 </v-card>
             </v-container>
         </v-main>
