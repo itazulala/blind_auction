@@ -14,6 +14,7 @@
                             <v-text-field style="padding: 10px;"
                                 v-model="setFamilyName"
                                 :rules="rules"
+                                autofocus
                                 label="性"
                                 outlined
                             />
