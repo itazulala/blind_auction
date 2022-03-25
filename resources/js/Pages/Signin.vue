@@ -115,15 +115,15 @@
                                 label="都道府県"
                                 outlined
                             />
+                        </div>
+                        <!--住所下部-->
+                        <div>
                             <v-text-field style="padding: 10px;"
                                 v-model="setAddress2"
                                 :rules="rules"
                                 label="市区町村"
                                 outlined
                             />
-                        </div>
-                        <!--住所下部-->
-                        <div style="display: flex;">
                             <v-text-field style="padding: 10px;"
                                 v-model="setAddress3"
                                 :rules="rules"
