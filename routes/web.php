@@ -39,6 +39,12 @@ Route::get('/login', function () {
     return Inertia::render('Login', [
     ]);
 });
+// コンソール画面
+Route::get('/console', function () {
+    return Inertia::render('Console', [
+    ]);
+});
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
