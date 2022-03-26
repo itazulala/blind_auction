@@ -10,11 +10,13 @@
                     <div style="display: flex; flex-wrap: wrap;margin: justify-content: center;">
                         <!--出品関連-->
                         <div style="width: 45%; height: 200px; margin: 2%; border: double; border-radius: 10px; font-size: 24px; ">
+                            <h1>出品関連</h1>
                             <a href="/">・出品</a><br>
                             <a href="/">・作品管理</a>
                         </div>
                         <!--入札関連-->
                         <div style="width: 45%; height: 200px; margin: 2%; border: double; border-radius: 10px; font-size: 24px; ">
+                            <h1>入札関連</h1>
                             <a href="/">・閲覧履歴</a><br>
                             <a href="/">・お気に入り</a><br>
                             <a href="/">・入札中の作品</a><br>
@@ -22,6 +24,7 @@
                         </div>
                         <!--設定関連-->
                         <div style="width: 45%; height: 200px; margin: 2%; border: double; border-radius: 10px; font-size: 24px; ">
+                            <h1>設定関連</h1>
                             <a href="/">・アカウント情報の変更</a><br>
                             <a href="/">・振込設定</a><br>
                             <a href="/">・退会する</a><br>
