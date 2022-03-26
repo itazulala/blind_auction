@@ -53,6 +53,7 @@
                             ログイン
                             </v-btn>
                         </div>
+                        <br>
                         <!--各リンク-->
                         <div style=" display:block; margin:auto;">
                             <!--パスワードを忘れた方-->
