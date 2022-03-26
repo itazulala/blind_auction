@@ -24,7 +24,7 @@
                                 label="名"
                                 outlined
                             />
-                        </div>    
+                        </div>
                     </div>
                     <!--お名前(カナ)-->
                     <div>
@@ -66,7 +66,7 @@
                         </div>
                     </div>
                     <!--アーティスト名-->
-                    <div>                    
+                    <div>
                         <h1>アーティスト名</h1>
                         <v-text-field style="padding: 10px;"
                             v-model="setArtistName"
@@ -135,7 +135,7 @@
                                 :rules="rules"
                                 label="建物名と部屋番号"
                                 outlined
-                            />                    
+                            />
                         </div>
                     </div>
                     <!--プロフィール-->
@@ -148,51 +148,6 @@
                             label="自由記入欄です。ご自身のプロフィールをご記入ください。"
                         ></v-textarea>
                     </div>
-<!--                    <v-card-actions class="ma-5" v-if="layoutDisplay == true">
-                        <v-spacer></v-spacer>
-                        <v-icon icon large class="mx-2">mdi-format-list-bulleted-square</v-icon>
-                        <v-icon icon large class="mx-2">mdi-view-grid-outline</v-icon>
-                        <v-icon icon large class="mx-2">mdi-grid</v-icon>
-                    </v-card-actions>
-                    <v-container fluid>
-                        <v-row>
-                            <v-col
-                                v-for="card in cards"
-                                :key="card.title"
-                                xs="12"
-                                sm="6"
-                                md="4"
-                            >
-                                <v-card flat>
-                                    <v-card-text>
-                                        <v-img
-                                            :src="card.src"
-                                            gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-                                            class="mx-auto my-0"
-
-                                        >
-                                        </v-img>
-                                    </v-card-text>
-                                    <v-card-actions class="pa-3">
-                                        {{ card.title }}
-                                    </v-card-actions>
-                                    <div class="dashed"></div>
-                                    <v-card-actions class="pa-3">
-                                        <v-spacer></v-spacer>
-                                        {{ card.creator }}
-                                    </v-card-actions>
-                                    <div class="dashed"></div>
-                                    <v-card-actions class="pa-3">
-                                        <v-btn>入札</v-btn>
-                                        <v-spacer></v-spacer>
-                                        <v-icon icon v-on:click="">mdi-heart-outline</v-icon>
-                                    </v-card-actions>
-                                    <div class="dashed"></div>
-                                </v-card>
-                            </v-col>
-                        </v-row>
-                    </v-container> -->
-
                 </v-card>
             </v-container>
         </v-main>

@@ -4,8 +4,9 @@
 <!--        <Sidebar></Sidebar> -->
         <v-main>
             <v-container class="pa-10">
-                <h1>ログイン</h1>
-                <v-card class="pt-2 pl-5 pr-5">
+                <v-card width="60%" class="pt-2 pl-5 pr-5 mx-auto">
+                    <v-card-title>ログイン</v-card-title>
+                    <v-divider></v-divider>
                     <!--ログインBOX-->
                     <v-container fluid>
                         <v-row>
