@@ -29,6 +29,11 @@ Route::get('/top', function () {
     return Inertia::render('Top', [
     ]);
 });
+// 商品一覧画面
+Route::get('/itemlist', function () {
+    return Inertia::render('ItemList', [
+    ]);
+});
 // ユーザー登録画面
 Route::get('/signin', function () {
     return Inertia::render('Signin', [
