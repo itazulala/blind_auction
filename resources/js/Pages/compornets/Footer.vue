@@ -2,7 +2,7 @@
     <v-footer color="#707070" light absolute app>
         <v-container>
             <v-row>
-                <v-col>
+                <v-col class="text-h4 mt-2 white--text">
                     Blind Auction
                 </v-col>
                 <v-col>
@@ -16,7 +16,7 @@
                                 :to="item.link"
                             >
                                 <v-list-item-content class="text-caption">
-                                    {{ item.text }}
+                                    <div class="white--text">{{ item.text }}</div>
                                 </v-list-item-content>
                             </v-list-item>
                         </v-list-item-group>
@@ -33,7 +33,7 @@
                                 :to="item.link"
                             >
                                 <v-list-item-content class="text-caption">
-                                    {{ item.text }}
+                                    <div class="white--text">{{ item.text }}</div>
                                 </v-list-item-content>
                             </v-list-item>
                         </v-list-item-group>

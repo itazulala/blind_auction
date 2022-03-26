@@ -6,7 +6,7 @@
             <v-container class="pa-10">
                 <v-card class="pt-2 pl-5 pr-5">
                     <v-card-title class="border-b-2">作品一覧</v-card-title>
-                    <v-card-actions class="ma-5" v-if="layoutDisplay == true">
+                    <v-card-actions class="ma-5">
                         <v-spacer></v-spacer>
                         <v-icon icon large class="mx-2">mdi-format-list-bulleted-square</v-icon>
                         <v-icon icon large class="mx-2">mdi-view-grid-outline</v-icon>
