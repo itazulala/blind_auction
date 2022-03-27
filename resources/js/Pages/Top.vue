@@ -5,7 +5,7 @@
         <v-main class="blue-grey lighten-5">
             <v-container class="pa-10">
                 <v-card class="pt-5 pb-5 pl-10 pr-10">
-                    <v-card-title class="border-b-2 mb-5 text-subtitle-1">ランキング</v-card-title>
+                    <v-card-title class="pt-0 border-b-2 mb-5 text-subtitle-1">ランキング</v-card-title>
                     <v-row>
                         <v-col
                             v-for="item in items"
@@ -26,7 +26,7 @@
                     :key="feature.mainTitle"
                     class="mt-10 pt-5 pb-5 pl-10 pr-10"
                 >
-                    <v-card-title class="border-b-2 mb-5 text-subtitle-1">{{ feature.mainTitle }}</v-card-title>
+                    <v-card-title class="pt-0 border-b-2 mb-5 text-subtitle-1">{{ feature.mainTitle }}</v-card-title>
                     <v-row>
                         <v-col
                             v-for="item in feature.items"
